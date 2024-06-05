@@ -24,7 +24,7 @@ if (isset($_POST["gonder"])) {
     }
 
     // E-posta gönderme işlemleri
-    $kime = "cemreuyar0@gmail.com";
+    $kime = "herhangibir@gmail.com";
     $konu = "Portfolyo'dan Mesaj Var!";
     $mesajIcerik = "
     <html>
@@ -48,8 +48,8 @@ if (isset($_POST["gonder"])) {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'cemreuyar0@gmail.com'; // Gmail SMTP kullanıcı adı
-        $mail->Password = 'ywlg hdwn xtve ijms'; // Gmail SMTP parola
+        $mail->Username = 'herhangibir@gmail.com'; // Gmail SMTP kullanıcı adı
+        $mail->Password = 'birsifre'; // Gmail SMTP parola
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
