@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+/* Google Fonts'tan Poppins yazı tipini import eder. */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Tüm elementlerin margin ve padding'ini sıfırlar, border-box modelini kullanır ve Poppins yazı tipini uygular. */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #240046, #5A189A, #9D4EDD);
+    color: #fff;
+    margin: 0;
+}
+
+/* Body'yi bir flex konteyner yapar ve içeriği ortalar. Tam yüksekliği kaplar ve gradyan bir arka plan verir. */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Header'ı sabitler, genişliğini %100 yapar, iç kenar boşluğu ekler, içeriği yatayda ve dikeyde hizalar, en üst katmanda yer almasını sağlar. */
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+/* Logo'nun stilini belirler, beyaz renk, büyük yazı tipi ve kalın yazı kullanır. Link tıklamasını devre dışı bırakır. */
+
+.navbar a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+}
+
+/* Navbar'daki linklerin stilini belirler, beyaz renk, büyük yazı tipi ve kalın yazı kullanır. Sol boşluk ekler. */
+
+.navbar a.active,
+.navbar a:hover {
+    background: linear-gradient(45deg, #6d33b3, #0593c2);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+/* Aktif veya üzerine gelinen navbar linklerine gradyan bir yazı rengi verir. */
+
+h1,
+.welcome-message {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Hoş geldin mesajı için margin ve hizalama belirler. */
+
+.contact-form {
+    background: #fff;
+    color: #333;
+    width: 70%;
+    margin-top: 100px;
+    padding: 3%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* İletişim formu için stil belirler, beyaz arka plan, genişlik, padding ekler, kenarları yuvarlar ve gölge ekler. */
+
+.contact-form .form-control {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* İletişim formundaki input ve textarea elemanlarına stil verir. Genişlik, padding, margin, border, border-radius ve font-size ekler. */
+
+.contact-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* İletişim formundaki resim için stil belirler, ortalar ve alt boşluk ekler. */
+
+.contact-image img {
+    border-radius: 50%;
+    width: 100px;
+    margin-top: -50px;
+    transform: rotate(29deg);
+}
+
+/* İletişim formundaki resim için yuvarlak köşe, boyut, üst margin ve döndürme efekti ekler. */
+
+.contact-form h3 {
+    margin-bottom: 5%;
+    text-align: center;
+    color: #9D4EDD;
+}
+
+/* İletişim formundaki H3 başlığı için margin, hizalama ve renk belirler. */
+
+.contact-form .btnContact {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background: #6d33b3;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* İletişim formundaki butonlar için stil belirler, genişlik, yuvarlak köşe, padding, arka plan rengi, yazı kalınlığı ve cursor efekti ekler. */
+
+.contact-form .btnContact:hover {
+    background: #5A189A;
+}
+
+/* Buton hover efekti için stil belirler. */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+/* Row için stil belirler, flexbox kullanarak esnek yapıya sokar ve negatif margin ile boşlukları düzenler. */
+
+.column {
+    flex: 50%;
+    padding: 0 15px;
+}
+
+/* Kolonlar için stil belirler, genişlik %50 ve padding ekler. */
+
+.success-message, .error-message {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    z-index: 999; /* Yüksek bir z-index değeri */
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Yeni eklenen stil */
+.message-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
