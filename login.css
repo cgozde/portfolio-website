@@ -1,20 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-  
+/* Genel stil ayarları */
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Tüm elementler için Poppins fontunu kullanır */
 }
-body{
-	margin: 0;
-	padding: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background: linear-gradient(to bottom, #240046,#5A189A, #9D4EDD);
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #240046, #5A189A, #9D4EDD); /* Arka plan lineer gradient */
 }
+
 .header {
     position: fixed;
     top: 0;
@@ -25,7 +27,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 100; /* Header'ın diğer içeriklerin üzerinde olmasını sağlar */
     box-sizing: border-box;
 }
 
@@ -34,7 +36,7 @@ body{
     color: #fff;
     text-decoration: none;
     font-weight: 600;
-    pointer-events: none;
+    pointer-events: none; /* Logo üzerine tıklanamaz */
 }
 
 .navbar a {
@@ -42,122 +44,134 @@ body{
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 35px;
+    margin-left: 35px; /* Menü bağlantıları arasındaki boşluk */
 }
 
-.navbar a.active ,
+.navbar a.active,
 .navbar a:hover {
-    background: linear-gradient(45deg, #6d33b3,#0593c2);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-}
-.main{
-	width: 350px;
-	height: 500px;
-	background: red;
-	overflow: hidden;
-	background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
-	border-radius: 10px;
-	box-shadow: 5px 20px 50px #000;
-}
-#chk{
-	display: none;
-}
-.signup{
-	position: relative;
-	width:100%;
-	height: 100%;
-}
-label{
-	color: #fff;
-	font-size: 2.3em;
-	justify-content: center;
-	display: flex;
-	margin: 60px;
-	font-weight: bold;
-	cursor: pointer;
-	transition: .5s ease-in-out;
-}
-input{
-	width: 60%;
-	height: 30px;
-	background: #dadada;
-	justify-content: center;
-	display: flex;
-	margin: 20px auto;
-	padding: 10px;
-	border: none;
-	outline: none;
-	border-radius: 5px;
-}
-button{
-	width: 60%;
-	height: 40px;
-	margin: 10px auto;
-	justify-content: center;
-	display: block;
-	color: #fff;
-	background: #573b8a;
-	font-size: 1em;
-	font-weight: bold;
-	margin-top: 20px;
-	outline: none;
-	border: none;
-	border-radius: 5px;
-	transition: .2s ease-in;
-	cursor: pointer;
-}
-button:hover{
-	background: #6d44b8;
-}
-.login{
-	height: 460px;
-	background: #eee;
-	border-radius: 60% / 10%;
-	transform: translateY(-180px);
-	transition: .8s ease-in-out;
-}
-.login label{
-	color: #573b8a;
-	transform: scale(.6);
+    background: linear-gradient(45deg, #6d33b3, #0593c2); /* Aktif veya hover durumundaki bağlantıların arka plan gradienti */
+    -webkit-text-fill-color: transparent; /* Metni transparent yapar */
+    -webkit-background-clip: text; /* Metnin gradient ile doldurulmasını sağlar */
 }
 
-#chk:checked ~ .login{
-	transform: translateY(-500px);
-}
-#chk:checked ~ .login label{
-	transform: scale(1);	
-}
-#chk:checked ~ .signup label{
-	transform: scale(.6);
+.main {
+    width: 350px;
+    height: 500px;
+    background: red; /* Geçici olarak kırmızı arka plan */
+    overflow: hidden;
+    background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover; /* Arka plan resmi */
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000; /* Kutu gölgesi */
 }
 
-.success-message, .error-message {
+#chk {
+    display: none; /* Check inputu görünmez yapar */
+}
+
+.signup {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+label {
+    color: #fff;
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out; /* Geçiş efekti */
+}
+
+input {
+    width: 60%;
+    height: 30px;
+    background: #dadada;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+button {
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: #573b8a;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in; /* Geçiş efekti */
+    cursor: pointer;
+}
+
+button:hover {
+    background: #6d44b8; /* Düğme üzerine gelindiğinde arka plan rengini değiştirir */
+}
+
+.login {
+    height: 460px;
+    background: #eee; /* Geçici olarak gri arka plan */
+    border-radius: 60% / 10%; /* Oval şekil verir */
+    transform: translateY(-180px); /* Y ekseni üzerinde yukarı kaydırır */
+    transition: .8s ease-in-out; /* Geçiş efekti */
+}
+
+.login label {
+    color: #573b8a;
+    transform: scale(.6); /* Ölçeklendirme efekti */
+}
+
+#chk:checked ~ .login {
+    transform: translateY(-500px); /* Check input seçili ise daha fazla yukarı kaydırır */
+}
+
+#chk:checked ~ .login label {
+    transform: scale(1); /* Check input seçili ise ölçeği normal boyuta getirir */
+}
+
+#chk:checked ~ .signup label {
+    transform: scale(.6); /* Check input seçili ise ölçeği küçültür */
+}
+
+.success-message,
+.error-message {
     position: fixed;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #d4edda;
-    color: #155724;
+    background-color: #d4edda; /* Başarı veya hata mesajı arka plan rengi */
+    color: #155724; /* Metin rengi */
     padding: 10px;
     border-radius: 5px;
-    margin-bottom: 50px;
-    z-index: 999; /* Yüksek bir z-index değeri */
+    margin-bottom: 50px; /* Alt kenar boşluğu */
+    z-index: 999; /* Üst öğelerin üzerine çıkarır */
 }
 
 .error-message {
-    background-color: #f8d7da;
-    color: #721c24;
+    background-color: #f8d7da; /* Hata mesajı arka plan rengi */
+    color: #721c24; /* Hata mesajı metin rengi */
 }
 
-/* Yeni eklenen stil */
 .message-container {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* İçeriği yatayda merkezler */
 }
+
 
 

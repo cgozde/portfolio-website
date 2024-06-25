@@ -1,35 +1,38 @@
 <?php
+include ("connection.php"); // Bağlantı dosyasını dahil eder
 
-include ("connection.php");
-
+// Kullanıcı zaten oturum açmışsa profil sayfasına yönlendirir
 if (isset($_SESSION['kullanici_adi'])) {
     header("Location: profile.php");
     exit();
 }
 
+// Kayıt formu gönderildiğinde işlemleri gerçekleştirir
 if(isset($_POST["kaydet"]))
 {
+    // POST verilerini alır
 	$name=$_POST["kullaniciadi"];
 	$email=$_POST["email"];
 	$password=$_POST["parola"];
 
+    // Veritabanına kullanıcı bilgilerini ekler
 	$ekle="INSERT INTO kullanicilar (kullanici_adi, email, parola) VALUES ('$name','$email','$password')";
 
-	$calistirekle = mysqli_query($baglanti, $ekle);
+	$calistirekle = mysqli_query($baglanti, $ekle); // SQL komutunu çalıştırır
 
+    // Ekleme başarılı ise başarılı mesajını gösterir, değilse hata mesajını gösterir
 	if($calistirekle)
 	{
 		echo '<div class="message-container"><div class="success-message">Kullanıcı kaydı başarıyla oluşturuldu!</div></div>';
 	}
-	else{
+	else {
 		echo '<div class="message-container"><div class="error-message">Kullanıcı kaydı başarısız!</div></div>';
 	}
 
-	mysqli_close($baglanti);
+	mysqli_close($baglanti); // Veritabanı bağlantısını kapatır
 }
-
-
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,7 +48,7 @@ if(isset($_POST["kaydet"]))
             <a href="about.php">Hakkımda</a>
             <a href="portfolio.php">Portfolyo</a>
             <a href="contact.php">İletişim</a>
-			<?php if (isset($_SESSION['kullanici_adi'])): ?>
+			<?php if (isset($_SESSION['kullanici_adi'])): ?> <!-- Oturum açmışsa profil bağlantısı, değilse giriş bağlantısı -->
                 <a href="profile.php">Profil</a>
             <?php else: ?>
                 <a href="login.php">Giriş</a>
@@ -73,6 +76,5 @@ if(isset($_POST["kaydet"]))
 				</form>
 			</div>
 	</div>
-	
 </body>
 </html>
