@@ -1,14 +1,17 @@
 BİM472 İnternet ve Web Teknolojileri dersi kapsamında yapmış olduğum Kişisel Portfolyo Websitesi’dir.
+
 Kullanılan Teknolojiler:
 -	HTML
 -	CSS
 -	PHP
+
 Kütüphaneler ve Araçlar:
 -	PHP Mailer
 -	Google Fonts
 -	Boxicons
 Ekran Görüntüleri:
-	Kullanıcı Girişi Yapılmadığında:
+
+Kullanıcı Girişi Yapılmadığında:
  
  ![alt text](image.png)
  ![alt text](image-1.png)
