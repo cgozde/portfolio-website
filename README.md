@@ -58,7 +58,7 @@ Kullanıcı girişi yapıldıktan sonra diğer sayfalardaki Giriş kısmı yerin
 
 ![alt text](/screenshots/image-12.png)
 ![alt text](/screenshots/image-13.png)
-![alt text](/screenshots/image-14.png)
+![alt text](/screenshots/image-14.jpg)
 
 Kullanıcı “admin” kullanıcı adı ile giriş yaparsa yalnızca bu kullanıcıya ait olan proje silme yetkisi vardır:
 
