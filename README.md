@@ -5,8 +5,11 @@ Bu site, kişisel portfolyo projelerimi sergilemek için oluşturduğum bir web 
 
 ## Özellikler
 **Ana Sayfa:** Kısa bir tanıtım ve sitenin amacı.
+
 **Hakkımda:** Detaylı bir biyografi.
+
 **Portfolyo:** Tamamlanmış ve devam eden projeler hakkında detaylı bilgiler.
+
 **İletişim:** Bana ulaşabileceğiniz ve mesaj gönderebileceğiniz bir ekran.
 
 ## Kullanılan Teknolojiler:
@@ -70,7 +73,7 @@ Eğer bu projeyi yerel olarak çalıştırmak isterseniz, aşağıdaki adımlar�
 
 1. Bu repoyu klonlayın:
 	```bash
-	git clone 
+	git clone https://github.com/cgozde/portfolio-website.git
 2. Proje dizinine gidin:
 	```bash
 	cd [repository name]
