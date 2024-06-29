@@ -68,7 +68,6 @@ Kullanıcı “admin” kullanıcı adı ile giriş yaparsa yalnızca bu kullan�
 Eğer bu projeyi yerel olarak çalıştırmak isterseniz, aşağıdaki adımları takip edebilirsiniz:
 ### Gereksinimler
 - PHP 7.4 veya daha yeni bir sürüm
-- Composer
 - Bir web sunucusu (Apache, Nginx, Xampp vb.)
 
 1. Bu repoyu klonlayın:
